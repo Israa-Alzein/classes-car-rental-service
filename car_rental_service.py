@@ -31,3 +31,11 @@ class Vehicle:
         self.model = model
         self.year = year
         self.rental_price_per_day = rental_price_per_day
+
+    def display_info(self):
+        print(f"Vehicle: {self.brand} {self.model}, Year: {self.year}, Rental Price: ${self.rental_price_per_day}/day")
+
+    def calculate_rental_cost(self, days):
+        rental_cost = self.rental_price_per_day * days
+        print(f"Rental cost for {self.brand} {self.model} for {days} days: ${rental_cost}")
+        return rental_cost
