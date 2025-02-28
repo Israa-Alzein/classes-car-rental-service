@@ -30,7 +30,17 @@ class Vehicle:
         self.brand = brand
         self.model = model
         self.year = year
-        self.rental_price_per_day = rental_price_per_day
+        self.__rental_price_per_day = rental_price_per_day  #making rental_price_per_day private 
+
+    # getter for rental_price_per_day
+    @property
+    def rental_price_per_day(self):
+        return self.__rental_price_per_day
+    
+    # setter for rental_price_per_day
+    @rental_price_per_day.setter
+    def rental_price_per_day(self, rental_price_per_day):
+        self.__rental_price_per_day = rental_price_per_day
 
     def display_info(self):
         print(f"Vehicle: {self.brand} {self.model}, Year: {self.year}, Rental Price: ${self.rental_price_per_day}/day")
@@ -63,3 +73,10 @@ class Bike(Vehicle):
 
     def calculate_rental_cost(self, days):
         return super().calculate_rental_cost(days)
+
+
+
+c1 = Car("toyata", "d3", 2004, 40, 5)
+c1.display_info()
+c1.rental_price_per_day = 60
+c1.display_info()
