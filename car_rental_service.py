@@ -39,3 +39,9 @@ class Vehicle:
         rental_cost = self.rental_price_per_day * days
         print(f"Rental cost for {self.brand} {self.model} for {days} days: ${rental_cost}")
         return rental_cost
+
+
+class Car(Vehicle):
+    def __init__(self, brand, model, year, rental_price_per_day, seating_capacity):
+        super().__init__(brand, model, year, rental_price_per_day)  
+        self.seating_capacity = seating_capacity
