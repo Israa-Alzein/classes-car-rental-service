@@ -33,7 +33,7 @@ class Vehicle:
         self.__rental_price_per_day = rental_price_per_day  #making rental_price_per_day private 
 
     # getter for rental_price_per_day
-    @property
+    @property       
     def rental_price_per_day(self):
         return self.__rental_price_per_day
     
@@ -75,8 +75,11 @@ class Bike(Vehicle):
         return super().calculate_rental_cost(days)
 
 
+def show_vehicle_info(vehicle):
+    vehicle.display_info()
+
 
 c1 = Car("toyata", "d3", 2004, 40, 5)
-c1.display_info()
+show_vehicle_info(c1)
 c1.rental_price_per_day = 60
-c1.display_info()
+show_vehicle_info(c1)
