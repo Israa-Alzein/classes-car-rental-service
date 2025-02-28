@@ -51,3 +51,9 @@ class Car(Vehicle):
 
     def calculate_rental_cost(self, days):
         return super().calculate_rental_cost(days)
+
+
+class Bike(Vehicle):
+    def __init__(self, brand, model, year, rental_price_per_day, engine_capacity):
+        super().__init__(brand, model, year, rental_price_per_day)
+        self.engine_capacity = engine_capacity
