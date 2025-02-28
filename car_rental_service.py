@@ -79,7 +79,18 @@ def show_vehicle_info(vehicle):
     vehicle.display_info()
 
 
-c1 = Car("toyata", "d3", 2004, 40, 5)
-show_vehicle_info(c1)
-c1.rental_price_per_day = 60
-show_vehicle_info(c1)
+c1 = Car("Toyota", "Corolla", 2020, 50, 5)
+b1 = Bike("Yamaha", "R1", 2019, 30,"998cc")
+c1.display_info()
+b1.display_info()
+
+print()
+
+c1.calculate_rental_cost(3)
+b1.calculate_rental_cost(5)
+
+print()
+
+c1.rental_price_per_day = 55
+print(f"Updated rental price for Toyota Corolla: ${c1.rental_price_per_day}/day")
+
